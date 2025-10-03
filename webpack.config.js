@@ -18,10 +18,16 @@ module.exports = (env, argv) => {
       static: {
         directory: path.join(__dirname, 'web'),
       },
+      host: '0.0.0.0',
       port: 5173,
       hot: true,
       historyApiFallback: true,
       open: true,
+      client: {
+        webSocketURL: {
+          hostname: 'localhost',
+        },
+      },
     },
     resolve: {
       alias: {
